@@ -44,6 +44,10 @@
 		183FF9E7201044DE00A84D2D /* UIView+SFView.m in Sources */ = {isa = PBXBuildFile; fileRef = 183FF9CA201044DE00A84D2D /* UIView+SFView.m */; };
 		183FF9EC2010463200A84D2D /* SFAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 183FF9EB2010463200A84D2D /* SFAudioManager.m */; };
 		183FF9EF201046E300A84D2D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183FF9EE201046E300A84D2D /* AVFoundation.framework */; };
+		183FF9F320104C9C00A84D2D /* SFAudioRcoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183FF9F120104C9C00A84D2D /* SFAudioRcoderViewController.m */; };
+		183FF9F420104C9C00A84D2D /* SFAudioRcoderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183FF9F220104C9C00A84D2D /* SFAudioRcoderViewController.xib */; };
+		183FF9F720104D3B00A84D2D /* SFAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 183FF9F620104D3B00A84D2D /* SFAudio.m */; };
+		183FF9FA2010505C00A84D2D /* SFAudioToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 183FF9F92010505C00A84D2D /* SFAudioToolView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +150,13 @@
 		183FF9EA2010463200A84D2D /* SFAudioManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFAudioManager.h; sourceTree = "<group>"; };
 		183FF9EB2010463200A84D2D /* SFAudioManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFAudioManager.m; sourceTree = "<group>"; };
 		183FF9EE201046E300A84D2D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		183FF9F020104C9C00A84D2D /* SFAudioRcoderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFAudioRcoderViewController.h; sourceTree = "<group>"; };
+		183FF9F120104C9C00A84D2D /* SFAudioRcoderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFAudioRcoderViewController.m; sourceTree = "<group>"; };
+		183FF9F220104C9C00A84D2D /* SFAudioRcoderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SFAudioRcoderViewController.xib; sourceTree = "<group>"; };
+		183FF9F520104D3B00A84D2D /* SFAudio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFAudio.h; sourceTree = "<group>"; };
+		183FF9F620104D3B00A84D2D /* SFAudio.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFAudio.m; sourceTree = "<group>"; };
+		183FF9F82010505C00A84D2D /* SFAudioToolView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFAudioToolView.h; sourceTree = "<group>"; };
+		183FF9F92010505C00A84D2D /* SFAudioToolView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFAudioToolView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +266,9 @@
 		183FF980201044DE00A84D2D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				183FF9F020104C9C00A84D2D /* SFAudioRcoderViewController.h */,
+				183FF9F120104C9C00A84D2D /* SFAudioRcoderViewController.m */,
+				183FF9F220104C9C00A84D2D /* SFAudioRcoderViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -269,6 +283,8 @@
 		183FF982201044DE00A84D2D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				183FF9F82010505C00A84D2D /* SFAudioToolView.h */,
+				183FF9F92010505C00A84D2D /* SFAudioToolView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -281,6 +297,8 @@
 				183FF98A201044DE00A84D2D /* UIButton+SFButton.m */,
 				183FF9EA2010463200A84D2D /* SFAudioManager.h */,
 				183FF9EB2010463200A84D2D /* SFAudioManager.m */,
+				183FF9F520104D3B00A84D2D /* SFAudio.h */,
+				183FF9F620104D3B00A84D2D /* SFAudio.m */,
 			);
 			path = SFTool;
 			sourceTree = "<group>";
@@ -505,6 +523,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				183FF9592010440B00A84D2D /* LaunchScreen.storyboard in Resources */,
+				183FF9F420104C9C00A84D2D /* SFAudioRcoderViewController.xib in Resources */,
 				183FF9562010440B00A84D2D /* Assets.xcassets in Resources */,
 				183FF9542010440B00A84D2D /* Main.storyboard in Resources */,
 			);
@@ -532,8 +551,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				183FF9D3201044DE00A84D2D /* LGAlertViewHelper.m in Sources */,
+				183FF9F320104C9C00A84D2D /* SFAudioRcoderViewController.m in Sources */,
 				183FF9D4201044DE00A84D2D /* LGAlertViewShadowView.m in Sources */,
 				183FF9E7201044DE00A84D2D /* UIView+SFView.m in Sources */,
+				183FF9FA2010505C00A84D2D /* SFAudioToolView.m in Sources */,
 				183FF9D1201044DE00A84D2D /* LGAlertViewCell.m in Sources */,
 				183FF9CF201044DE00A84D2D /* LGAlertViewButton.m in Sources */,
 				183FF9DB201044DE00A84D2D /* MASConstraint.m in Sources */,
@@ -548,6 +569,7 @@
 				183FF9E0201044DE00A84D2D /* NSArray+MASAdditions.m in Sources */,
 				183FF9E6201044DE00A84D2D /* SFGetTopVC.m in Sources */,
 				183FF9E1201044DE00A84D2D /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				183FF9F720104D3B00A84D2D /* SFAudio.m in Sources */,
 				183FF9D0201044DE00A84D2D /* LGAlertViewButtonProperties.m in Sources */,
 				183FF9D7201044DE00A84D2D /* LGAlertViewWindowContainer.m in Sources */,
 				183FF9D2201044DE00A84D2D /* LGAlertViewController.m in Sources */,
