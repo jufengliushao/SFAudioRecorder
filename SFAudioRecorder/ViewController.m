@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "SFAudioManager.h"
 @interface ViewController ()
 
 @end
@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [[SFAudioManager audioManager] sf_getAudioRight];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
