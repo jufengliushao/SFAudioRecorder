@@ -48,6 +48,7 @@
 		183FF9F420104C9C00A84D2D /* SFAudioRcoderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183FF9F220104C9C00A84D2D /* SFAudioRcoderViewController.xib */; };
 		183FF9F720104D3B00A84D2D /* SFAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 183FF9F620104D3B00A84D2D /* SFAudio.m */; };
 		183FF9FA2010505C00A84D2D /* SFAudioToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 183FF9F92010505C00A84D2D /* SFAudioToolView.m */; };
+		183FF9FE2010924400A84D2D /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 183FF9FD2010924300A84D2D /* libmp3lame.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,6 +158,8 @@
 		183FF9F620104D3B00A84D2D /* SFAudio.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFAudio.m; sourceTree = "<group>"; };
 		183FF9F82010505C00A84D2D /* SFAudioToolView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFAudioToolView.h; sourceTree = "<group>"; };
 		183FF9F92010505C00A84D2D /* SFAudioToolView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFAudioToolView.m; sourceTree = "<group>"; };
+		183FF9FC2010924300A84D2D /* lame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lame.h; sourceTree = "<group>"; };
+		183FF9FD2010924300A84D2D /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				183FF9EF201046E300A84D2D /* AVFoundation.framework in Frameworks */,
+				183FF9FE2010924400A84D2D /* libmp3lame.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +310,7 @@
 		183FF98B201044DE00A84D2D /* ThirdHelper */ = {
 			isa = PBXGroup;
 			children = (
+				183FF9FB2010924300A84D2D /* Lame */,
 				183FF98C201044DE00A84D2D /* LGAlertView */,
 				183FF9A6201044DE00A84D2D /* Masonry */,
 				183FF9C0201044DE00A84D2D /* MBProgressHUD */,
@@ -414,6 +419,15 @@
 				183FF9EE201046E300A84D2D /* AVFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		183FF9FB2010924300A84D2D /* Lame */ = {
+			isa = PBXGroup;
+			children = (
+				183FF9FC2010924300A84D2D /* lame.h */,
+				183FF9FD2010924300A84D2D /* libmp3lame.a */,
+			);
+			path = Lame;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -748,11 +762,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9KXT42C4BR;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = SFAudioRecorder/SFPrefixHeader.pch;
 				INFOPLIST_FILE = SFAudioRecorder/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SFAudioRecorder/SFAudio/ThirdHelper/Lame",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.easyhospital.SFAudioRecorder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -765,11 +784,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9KXT42C4BR;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = SFAudioRecorder/SFPrefixHeader.pch;
 				INFOPLIST_FILE = SFAudioRecorder/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SFAudioRecorder/SFAudio/ThirdHelper/Lame",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.easyhospital.SFAudioRecorder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

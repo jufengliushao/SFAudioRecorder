@@ -11,5 +11,7 @@
 @interface SFAudio : NSObject
 
 + (SFAudio *)audioFuncManager;
+- (void)sf_startRecord;
+- (void)sf_stopRecord;
 
 @end

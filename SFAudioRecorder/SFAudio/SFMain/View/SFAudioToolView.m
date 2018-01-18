@@ -8,7 +8,7 @@
 
 #import "SFAudioToolView.h"
 #import "Masonry.h"
-
+#import "SFAudio.h"
 @interface SFAudioToolView(){
     NSInteger currnetTime;
 }
@@ -49,8 +49,10 @@
         sender.selected = !sender.isSelected;
         if (sender.isSelected) {
             [ws createTimer];
+            [[SFAudio audioFuncManager] sf_startRecord];
         }else{
             [ws stopTimer];
+            [[SFAudio audioFuncManager] sf_stopRecord];
         }
     }];
 }
