@@ -54,7 +54,23 @@ static SFAudio *audioFM = nil;
 
 - (void)sf_stopRecord{
     [self.audioR stop];
-    [self sf_private_audioDeco];
+}
+
+- (void)sf_endocAudio:(void (^)(void))complete{
+    [self sf_private_audioDeco:complete];
+}
+
+- (void)sf_deleteAudio{
+    [[SFFileManager shareInstance] sf_deleteFileWithPath:filePath];
+    [[SFFileManager shareInstance] sf_deleteFileWithPath:fileDePath];
+}
+
+- (NSString *)audioPath{
+    return filePath;
+}
+
+- (NSString *)audioDecPath{
+    return fileDePath;
 }
 #pragma mark - 私有方法
 - (void)sf_private_prepare{
@@ -83,7 +99,7 @@ static SFAudio *audioFM = nil;
     [recordSettings setValue:[NSNumber numberWithInt:16] forKey:AVLinearPCMBitDepthKey];
 }
 
-- (void)sf_private_audioDeco{
+- (void)sf_private_audioDeco:(void(^)(void))complete{
     @try {
         int read, write;
         
@@ -115,6 +131,9 @@ static SFAudio *audioFM = nil;
         lame_close(lame);
         fclose(mp3);
         fclose(pcm);
+        if (complete) {
+            complete();
+        }
     }
     @catch (NSException *exception) {
         NSLog(@"%@",[exception description]);
